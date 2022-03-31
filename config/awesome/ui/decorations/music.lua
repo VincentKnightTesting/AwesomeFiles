@@ -290,7 +290,7 @@ playerctl:connect_signal("metadata", function(_, title, artist, album_path, albu
     if player_name == "mpd" then
         local m_now = artist .. " - " .. title .. "/" .. album
 
-        music_art:set_image(gears.surface.load_uncached(album_path))
+        
         music_now:set_markup_silently(m_now)
     end
 end)

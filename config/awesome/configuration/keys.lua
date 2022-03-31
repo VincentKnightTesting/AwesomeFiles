@@ -24,6 +24,18 @@ local machi = require("module.layout-machi")
 -- Helpers
 local helpers = require("helpers")
 
+-- GALLANT FUNCTION
+local function run_once(cmd)
+  local findme = cmd
+  local firstspace = cmd:find(' ')
+  if firstspace then findme = cmd:sub(0, firstspace - 1) end
+  awful.spawn.with_shell(string.format(
+                             'pgrep -u $USER -x %s > /dev/null || (%s)',
+                             findme, cmd), false)
+end
+
+
+
 -- Default modkey.
 modkey = "Mod4"
 alt = "Mod1"
@@ -146,9 +158,14 @@ awful.keyboard.append_global_keybindings({
 
     -- Music
     awful.key({}, "XF86AudioPlay", function()
-        playerctl:play_pause()
+        run_once("mpc toggle")
     end,
     {description = "toggle music", group = "hotkeys"}),
+
+    awful.key({}, "XF86AudioPause", function()
+        run_once("mpc toggle")
+    end,
+    {description = "fuck you awesomeWM", group = "hotkeys"}),
 
     awful.key({}, "XF86AudioPrev", function()
         playerctl:previous()
@@ -156,7 +173,7 @@ awful.keyboard.append_global_keybindings({
     {description = "previous music", group = "hotkeys"}),
 
     awful.key({}, "XF86AudioNext", function()
-        playerctl:next()
+        run_once("mpc next")
     end,
     {description = "next music", group = "hotkeys"}),
 

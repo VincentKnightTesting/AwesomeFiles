@@ -15,7 +15,7 @@ start mpDris2 # add playerctl support to mpd
 start picom --experimental-backends --config $HOME/.config/awesome/theme/picom.conf
 
 # auth
-start /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+
 
 # load X colors
 start xrdb $HOME/.Xresources

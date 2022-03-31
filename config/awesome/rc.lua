@@ -19,12 +19,12 @@ beautiful.init(gfs.get_configuration_dir() .. "theme/theme.lua")
 
 -- Default Applications
 terminal = "wezterm"
-editor = terminal .. " start " .. os.getenv("EDITOR")
-vscode = "code"
+editor = "emacs -nw"
+vscode = "emacs -nw"
 browser = "firefox"
 launcher = "rofi -show drun -theme " .. os.getenv("HOME") .. "/.config/awesome/theme/rofi.rasi"
 file_manager = "nautilus"
-music_client = terminal .. " start --class music ncmpcpp"
+music_client = "wezterm start --class music byobu"
 
 -- Weather API
 openweathermap_key = "" -- API Key

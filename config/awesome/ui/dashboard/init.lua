@@ -73,8 +73,8 @@ end
 
 -- Widget
 local profile = require("ui.dashboard.profile")
-local music = require("ui.dashboard.music")
-local media = require("ui.dashboard.mediakeys")
+-- local music = require("ui.dashboard.music")
+-- local media = require("ui.dashboard.mediakeys")
 local time = require("ui.dashboard.time")
 local date = require("ui.dashboard.date")
 local todo = require("ui.dashboard.todo")
@@ -170,11 +170,7 @@ dashboard:setup {
                     },
                     layout = wibox.layout.fixed.horizontal
                 },
-                {
-                    music,
-                    media,
-                    layout = wibox.layout.fixed.horizontal
-                },
+
                 notifs_boxed,
                 layout = wibox.layout.fixed.vertical
                 },

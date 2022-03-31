@@ -10,7 +10,7 @@
 local wezterm = require 'wezterm';
 
 return {
-    font_dirs = {"/home/rxyhn/.local/share/fonts"},
+    font_dirs = {"/home/gallant/.fonts"},
     front_end = "OpenGL",
     font = wezterm.font("Iosevka", {weight = "Regular", italic = false}),
     harfbuzz_features = {"calt=0", "clig=0", "liga=0"},
