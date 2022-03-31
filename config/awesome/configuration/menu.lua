@@ -12,7 +12,7 @@ awful.screen.connect_for_each_screen(function(s)
     -- Submenu
     awesomemenu = {
         {"Hotkeys", function() hotkeys_popup.show_help(nil, awful.screen.focused()) end},
-        {"Manual", terminal .. " -e man awesome"},
+        {"Manual", terminal .. " start man awesome"},
         {"Edit Config", editor .. " " .. awesome.conffile},
         {"Restart", awesome.restart},
         {"Quit", function() awesome.quit() end}

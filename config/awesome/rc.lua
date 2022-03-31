@@ -18,13 +18,13 @@ dpi = beautiful.xresources.apply_dpi
 beautiful.init(gfs.get_configuration_dir() .. "theme/theme.lua")
 
 -- Default Applications
-terminal = "alacritty"
-editor = terminal .. " -e " .. os.getenv("EDITOR")
+terminal = "wezterm"
+editor = terminal .. " start " .. os.getenv("EDITOR")
 vscode = "code"
 browser = "firefox"
 launcher = "rofi -show drun -theme " .. os.getenv("HOME") .. "/.config/awesome/theme/rofi.rasi"
 file_manager = "nautilus"
-music_client = terminal .. " --class music -e ncmpcpp"
+music_client = terminal .. " start --class music ncmpcpp"
 
 -- Weather API
 openweathermap_key = "" -- API Key

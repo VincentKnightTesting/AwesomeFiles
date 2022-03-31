@@ -33,7 +33,7 @@ These dotfiles are made with love, for sure.
 | ---------- | ----------------- |
 | WM         | awesome           |
 | OS         | arch linux        |
-| Terminal   | alacritty         |
+| Terminal   | wezterm           |
 | Shell      | zsh               |
 | Editor     | neovim / vscode   |
 | Compositor | picom             |
@@ -55,7 +55,7 @@ These dotfiles are made with love, for sure.
             *Assuming your AUR helper is* `yay`
 
             ```shell
-            yay -Sy awesome-git picom-git alacritty rofi todo-bin acpi acpid \
+            yay -Sy awesome-git picom-ibhagwan-git wezterm rofi todo-bin acpi acpid \
             wireless_tools jq inotify-tools polkit-gnome xdotool xclip maim \
             brightnessctl alsa-utils alsa-tools pulseaudio lm_sensors \
             mpd mpc mpdris2 ncmpcpp playerctl --needed 
